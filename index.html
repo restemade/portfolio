@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Портфолио инженера. Проекты, опыт, навыки и контакты." />
+  <meta name="theme-color" content="#0b0f1a" />
+
+  <meta property="og:title" content="Портфолио — Engineer" />
+  <meta property="og:description" content="Проекты, опыт, навыки и контакты." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:url" content="" />
+
+  <title>Портфолио — Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="bg">
+    <div class="grid"></div>
+    <div class="glow g1"></div>
+    <div class="glow g2"></div>
+    <div class="noise"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="На верх">
+      <span class="brandDot"></span>
+      <span class="brandText">portfolio</span>
+    </a>
+
+    <nav class="nav" aria-label="Навигация">
+      <a href="#projects">Проекты</a>
+      <a href="#experience">Опыт</a>
+      <a href="#skills">Навыки</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="actions">
+      <button class="chip" id="copyEmail" type="button" title="Скопировать email">
+        <span class="chipIcon">✉</span>
+        <span id="emailText">dimash.opg24@gmail.com</span>
+      </button>
+      <button class="btn" id="themeToggle" type="button" aria-label="Переключить тему">
+        <span class="btnIcon" aria-hidden="true">◐</span>
+        <span class="btnText">Тема</span>
+      </button>
+      <button class="btn btnPrimary" id="downloadCv" type="button">
+        <span class="btnIcon" aria-hidden="true">⬇</span>
+        <span class="btnText">CV</span>
+      </button>
+    </div>
+
+    <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobileMenu" id="mobileMenu" hidden>
+    <a href="#projects">Проекты</a>
+    <a href="#experience">Опыт</a>
+    <a href="#skills">Навыки</a>
+    <a href="#contacts">Контакты</a>
+    <div class="mobileLine"></div>
+    <button class="chip w100" id="copyEmailMobile" type="button">
+      ✉ <span>dimash.opg24@gmail.com</span>
+    </button>
+    <div class="mobileRow">
+      <button class="btn w100" id="themeToggleMobile" type="button">◐ Тема</button>
+      <button class="btn btnPrimary w100" id="downloadCvMobile" type="button">⬇ CV</button>
+    </div>
+  </div>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="heroLeft">
+        <div class="kicker">
+          <span class="pill">Full-stack</span>
+          <span class="pill pillGhost">Product mindset</span>
+          <span class="pill pillGhost">AI / Automation</span>
+        </div>
+
+        <h1 class="title">
+          Привет, я <span class="grad">Dinmukhammed</span>.
+          Делаю продукты, которые <span class="soft">реально</span> работают.
+        </h1>
+
+        <p class="subtitle">
+          Инженер, который любит скорость, чистую архитектуру и понятный UX.
+          Делаю веб, бэкенд, интеграции, дашборды, ботов и AI-фичи.
+        </p>
+
+        <div class="heroCtas">
+          <a class="btn btnPrimary" href="#projects">
+            <span class="btnIcon">⟡</span>
+            <span class="btnText">Смотреть проекты</span>
+          </a>
+          <a class="btn" href="#contacts">
+            <span class="btnIcon">↗</span>
+            <span class="btnText">Связаться</span>
+          </a>
+        </div>
+
+        <div class="heroStats">
+          <div class="stat">
+            <div class="statNum" data-count="25">0</div>
+            <div class="statLabel">проектов в проде / пилотах</div>
+          </div>
+          <div class="stat">
+            <div class="statNum" data-count="5">0</div>
+            <div class="statLabel">лет в IT</div>
+          </div>
+          <div class="stat">
+            <div class="statNum" data-count="12">0</div>
+            <div class="statLabel">интеграций и автоматизаций</div>
+          </div>
+        </div>
+
+        <div class="badges">
+          <span class="badge">Node.js</span>
+          <span class="badge">Python</span>
+          <span class="badge">PostgreSQL</span>
+          <span class="badge">React</span>
+          <span class="badge">Next.js</span>
+          <span class="badge">Flutter</span>
+          <span class="badge">GCP</span>
+          <span class="badge">Docker</span>
+        </div>
+      </div>
+
+      <aside class="heroRight">
+        <div class="card profile">
+          <div class="profileTop">
+            <div class="avatarWrap">
+              <img class="avatar" src="assets/avatar.jpg" alt="Фото" onerror="this.style.display='none'; this.parentElement.classList.add('avatarFallback');" />
+              <div class="avatarFallbackInner" aria-hidden="true">DT</div>
+            </div>
+            <div>
+              <div class="name">Dinmukhammed Turakbayev</div>
+              <div class="role">Software Engineer • Product Builder</div>
+              <div class="meta">
+                <span class="dot"></span>
+                <span id="statusText">свободен для проектов</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profileMid">
+            <div class="mini">
+              <div class="miniTitle">Фокус</div>
+              <div class="miniText">LXP • AI Search • Dashboards • Integrations</div>
+            </div>
+            <div class="mini">
+              <div class="miniTitle">Локация</div>
+              <div class="miniText">KZ • удалённо</div>
+            </div>
+            <div class="mini">
+              <div class="miniTitle">Стек</div>
+              <div class="miniText">JS/TS • Python • SQL • Cloud</div>
+            </div>
+          </div>
+
+          <div class="profileBottom">
+            <a class="linkBtn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="linkBtn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="linkBtn" href="#contacts">Contacts</a>
+          </div>
+        </div>
+
+        <div class="card now">
+          <div class="cardTitleRow">
+            <div class="cardTitle">Сейчас</div>
+            <div class="hint">живое обновление</div>
+          </div>
+          <div class="nowGrid">
+            <div class="nowItem">
+              <div class="nowLabel">Местное время</div>
+              <div class="nowValue" id="localTime">--:--</div>
+            </div>
+            <div class="nowItem">
+              <div class="nowLabel">Скорость ответа</div>
+              <div class="nowValue">быстро</div>
+            </div>
+            <div class="nowItem">
+              <div class="nowLabel">Формат</div>
+              <div class="nowValue">удалёнка / гибрид</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="sectionHead">
+        <div>
+          <h2>Проекты</h2>
+          
+        </div>
+        <div class="filters">
+          <button class="seg active" data-filter="all" type="button">Все</button>
+          <button class="seg" data-filter="web" type="button">Web</button>
+          <button class="seg" data-filter="ai" type="button">AI</button>
+          <button class="seg" data-filter="automation" type="button">Automation</button>
+          <button class="seg" data-filter="mobile" type="button">Mobile</button>
+        </div>
+      </div>
+
+      <div class="cards" id="projectGrid">
+        <article class="card project" data-tags="ai web">
+          <div class="projectTop">
+            <div class="projectIcon">⌁</div>
+            <div>
+              <h3>AI Search по нормативке</h3>
+              <p class="muted">RAG, векторный поиск, умные ответы, источники</p>
+            </div>
+          </div>
+          <div class="projectBody">
+            <ul class="bullets">
+              <li>Поиск по PDF/Doc с цитатами и ссылками</li>
+              <li>Роли, аудит, логирование запросов</li>
+              <li>Оптимизация скорости выдачи и качества</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Vector DB</span>
+            </div>
+          </div>
+          <div class="projectBottom">
+            <a class="btnSm" href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btnSm ghost" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="card project" data-tags="web automation">
+          <div class="projectTop">
+            <div class="projectIcon">⎔</div>
+            <div>
+              <h3>Дашборд колл-центра</h3>
+              <p class="muted">Метрики, фильтры, отчёты, экспорт</p>
+            </div>
+          </div>
+          <div class="projectBody">
+            <ul class="bullets">
+              <li>Агрегация данных и KPI по операторам</li>
+              <li>Сегментация, динамика, тренды</li>
+              <li>Экспорт в Excel, роли доступа</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">SQL</span><span class="tag">Charts</span>
+            </div>
+          </div>
+          <div class="projectBottom">
+            <a class="btnSm" href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btnSm ghost" href="#" target="_blank" rel="noreferrer">Case</a>
+          </div>
+        </article>
+
+        <article class="card project" data-tags="automation">
+          <div class="projectTop">
+            <div class="projectIcon">⟠</div>
+            <div>
+              <h3>Telegram бот для задач</h3>
+              <p class="muted">ClickUp, статусы, напоминания, команды</p>
+            </div>
+          </div>
+          <div class="projectBody">
+            <ul class="bullets">
+              <li>Авторизация, команды, меню, поиск</li>
+              <li>Планировщик напоминаний</li>
+              <li>Логи и устойчивость к ошибкам</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Node.js</span><span class="tag">Telegram API</span><span class="tag">ClickUp</span>
+            </div>
+          </div>
+          <div class="projectBottom">
+            <a class="btnSm" href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btnSm ghost" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="card project" data-tags="mobile web">
+          <div class="projectTop">
+            <div class="projectIcon">◈</div>
+            <div>
+              <h3>Платформа для обучения</h3>
+              <p class="muted">Личный кабинет, прогресс, контент, UX</p>
+            </div>
+          </div>
+          <div class="projectBody">
+            <ul class="bullets">
+              <li>LXP флоу без “скучных лекций”</li>
+              <li>Геймификация, миссии, прогресс</li>
+              <li>Админка для контента и пользователей</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Flutter</span>
+            </div>
+          </div>
+          <div class="projectBottom">
+            <a class="btnSm" href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btnSm ghost" href="#" target="_blank" rel="noreferrer">Case</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="sectionHead">
+        <div>
+          <h2>Опыт</h2>
+          
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="tItem card">
+          <div class="tRow">
+            <div>
+              <div class="tTitle">Skill Pro — Software Engineer</div>
+              <div class="tMeta">2021 — сейчас • продукты, автоматизация, интеграции</div>
+            </div>
+            <div class="tBadge">Full-stack</div>
+          </div>
+          <div class="tBody">
+            <ul class="bullets">
+              <li>Разработка веб-сервисов, кабинетов, админок</li>
+              <li>Интеграции с внешними API, платёжки, отчётность</li>
+              <li>Оптимизация производительности и качества данных</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tItem card">
+          <div class="tRow">
+            <div>
+              <div class="tTitle">Проекты под заказ — Engineer</div>
+              <div class="tMeta">Фриланс/контракты • MVP → прод</div>
+            </div>
+            <div class="tBadge">Delivery</div>
+          </div>
+          <div class="tBody">
+            <ul class="bullets">
+              <li>Быстрая сборка MVP с норм архитектурой</li>
+              <li>UI/UX внимание к деталям, метрики, логирование</li>
+              <li>Документация, поддержка, сопровождение релизов</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="sectionHead">
+        <div>
+          <h2>Навыки</h2>
+          
+        </div>
+      </div>
+
+      <div class="skillGrid">
+        <div class="card skill">
+          <div class="skillTitle">Backend</div>
+          <div class="skillList">
+            <span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">REST</span><span class="tag">Auth</span><span class="tag">Queues</span>
+          </div>
+          <div class="meter" data-value="86"><span></span></div>
+        </div>
+
+        <div class="card skill">
+          <div class="skillTitle">Frontend</div>
+          <div class="skillList">
+            <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">UI Systems</span><span class="tag">Perf</span>
+          </div>
+          <div class="meter" data-value="82"><span></span></div>
+        </div>
+
+        <div class="card skill">
+          <div class="skillTitle">Data</div>
+          <div class="skillList">
+            <span class="tag">PostgreSQL</span><span class="tag">SQLite</span><span class="tag">ETL</span><span class="tag">Dashboards</span>
+          </div>
+          <div class="meter" data-value="78"><span></span></div>
+        </div>
+
+        <div class="card skill">
+          <div class="skillTitle">AI / Automation</div>
+          <div class="skillList">
+            <span class="tag">RAG</span><span class="tag">Vector Search</span><span class="tag">Bots</span><span class="tag">Integrations</span>
+          </div>
+          <div class="meter" data-value="74"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="sectionHead">
+        <div>
+          <h2>Контакты</h2>
+         
+        </div>
+      </div>
+
+      <div class="contactGrid">
+        <div class="card contact">
+          <div class="contactTitle">Написать</div>
+          <p class="muted">Самый быстрый способ — email или Telegram.</p>
+          <div class="contactBtns">
+            <a class="btn btnPrimary" href="mailto:dimash.opg24@gmail.com">✉ Email</a>
+            <a class="btn" href="https://t.me/eflcore" target="_blank" rel="noreferrer">✈ Telegram</a>
+          </div>
+        </div>
+
+        <div class="card contact">
+          <div class="contactTitle">Ссылки</div>
+          <p class="muted">Добавь реальные ссылки, и всё будет выглядеть очень сильно.</p>
+          <div class="listLinks">
+            <a href="https://github.com/restemade" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/dinmukhammed-turakbayev-27934b3a6/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://drive.google.com/file/d/1dtp9tIek8wU5zPPXmRh4arSt6Ua8o7bq/view?usp=sharing" target="_blank" rel="noreferrer">Resume PDF</a>
+          </div>
+        </div>
+
+        <div class="card contact">
+          <div class="contactTitle">Короткий пич</div>
+          <p class="muted">
+            Я делаю продукты быстро и аккуратно: от идеи до релиза.
+            Люблю понятный UX, скорость, метрики и интеграции.
+          </p>
+          <div class="tiny">
+            <span class="pill pillGhost">доступен: part-time</span>
+            <span class="pill pillGhost">формат: remote</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footerLeft">
+        <span class="brandDot"></span>
+        <span>© <span id="year"></span> Dinmukhammed</span>
+      </div>
+      <div class="footerRight">
+        <a href="#top">Наверх</a>
+        <span class="sep">•</span>
+        <a href="#" id="openCmd">Команды</a>
+      </div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <div class="toastInner" id="toastText">Скопировано</div>
+  </div>
+
+  <dialog class="modal" id="cmdModal">
+    <div class="modalTop">
+      <div class="modalTitle">Быстрые команды</div>
+      <button class="iconBtn" id="closeCmd" aria-label="Закрыть">✕</button>
+    </div>
+    <div class="modalBody">
+      <div class="cmdGrid">
+        <div class="cmd">
+          <div class="cmdKey">/</div>
+          <div class="cmdText">Открыть поиск проектов</div>
+        </div>
+        <div class="cmd">
+          <div class="cmdKey">P</div>
+          <div class="cmdText">Перейти к проектам</div>
+        </div>
+        <div class="cmd">
+          <div class="cmdKey">E</div>
+          <div class="cmdText">Перейти к опыту</div>
+        </div>
+        <div class="cmd">
+          <div class="cmdKey">S</div>
+          <div class="cmdText">Перейти к навыкам</div>
+        </div>
+        <div class="cmd">
+          <div class="cmdKey">C</div>
+          <div class="cmdText">Перейти к контактам</div>
+        </div>
+        <div class="cmd">
+          <div class="cmdKey">T</div>
+          <div class="cmdText">Переключить тему</div>
+        </div>
+      </div>
+
+      <div class="searchBox">
+        <div class="searchLabel">Поиск по проектам</div>
+        <input id="projectSearch" type="search" placeholder="Например: ai, бот, дашборд..." autocomplete="off" />
+        <div class="searchHint muted">Ищет по названию и описанию карточек</div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
