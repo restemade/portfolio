@@ -56,8 +56,8 @@ function downloadCV() {
 Software Engineer • Product Builder
 
 Email: ${EMAIL}
-GitHub: https://github.com/your-username
-LinkedIn: https://www.linkedin.com/in/your-profile
+GitHub: https://github.com/restemade
+LinkedIn: https://www.linkedin.com/in/dinmukhammed-turakbayev-27934b3a6/
 
 Кратко:
 - Full-stack разработка: веб, бэкенд, интеграции
