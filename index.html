@@ -27,22 +27,40 @@
     <div class="noise"></div>
   </div>
 
-  
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="На верх">
+      <span class="brandDot"></span>
+      <span class="brandText">portfolio</span>
+    </a>
 
-  <div class="mobileMenu" id="mobileMenu" hidden>
-    <a href="#projects">Проекты</a>
-    <a href="#experience">Опыт</a>
-    <a href="#skills">Навыки</a>
-    <a href="#contacts">Контакты</a>
-    <div class="mobileLine"></div>
-    <button class="chip w100" id="copyEmailMobile" type="button">
-      ✉ <span>dimash.opg24@gmail.com</span>
-    </button>
-    <div class="mobileRow">
-      <button class="btn w100" id="themeToggleMobile" type="button">◐ Тема</button>
-      <button class="btn btnPrimary w100" id="downloadCvMobile" type="button">⬇ CV</button>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#projects">Проекты</a>
+      <a href="#experience">Опыт</a>
+      <a href="#skills">Навыки</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="actions">
+      <button class="chip" id="copyEmail" type="button" title="Скопировать email">
+        <span class="chipIcon">✉</span>
+        <span id="emailText">dimash.opg24@gmail.com</span>
+      </button>
+      <button class="btn" id="themeToggle" type="button" aria-label="Переключить тему">
+        <span class="btnIcon" aria-hidden="true">◐</span>
+        <span class="btnText">Тема</span>
+      </button>
+      <button class="btn btnPrimary" id="downloadCv" type="button">
+        <span class="btnIcon" aria-hidden="true">⬇</span>
+        <span class="btnText">CV</span>
+      </button>
     </div>
-  </div>
+
+    <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  
 
   <main id="top" class="wrap">
     <section class="hero">
